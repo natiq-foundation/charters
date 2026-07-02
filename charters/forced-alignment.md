@@ -11,7 +11,7 @@
 | Field                  | Value            |
 | ---------------------- | ---------------- |
 | **Project Name**       | Forced Alignment |
-| **Project Code**       | Python           |
+| **Project Code**       |                  |
 | **Project Manager**    |                  |
 | **Development Team**   |                  |
 | **Start Date**         | 2025-07-13       |
@@ -23,15 +23,15 @@
 
 ### Vision
 
-Alignment Text to voice, by word by word timestamp.
+Automatically align a given text with a spoken audio file, producing word-level timestamps.
 
 ### High-Level Goals
 
-- Forced Alignment AI Algorithm
-- Cut voice file by word or cut flag
-- RESTfull Open API
-- Independent server
-- FrontEnd
+- Implement an AI-based forced alignment algorithm with word-level accuracy.
+- Splite the audio at specific timestamps (by word, sentence, or custom markers).
+- Standalone server
+- RESTful Open API
+- User-friendly web interface to upload audio/text, view results, and download segmented audio.
 
 ---
 
@@ -39,15 +39,14 @@ Alignment Text to voice, by word by word timestamp.
 
 ### In-Scope
 
-- Get voice file & text, Response json
-- Cut voice file
-- Hold files in S3
-- Serve response in S3
+- Accept an audio file and its transcript, return a JSON response with alignment timestamps.
+- Segment the audio file.
+- Store input and output files in S3-compatible storage.
 
 ### Out-of-Scope
 
-- Convert voice to text
-- Collect any Backupable data
+- Speech-to-text (ASR) transcription.
+- Collection of data for backup purposes.
 
 ---
 
@@ -56,7 +55,7 @@ Alignment Text to voice, by word by word timestamp.
 ### Frontend
 
 - **Framework**: React
-- **Template**: [natiq-frontend](/natiq-foundation/natiq-frontend)
+- **Template**: [natiq-frontend](https://github.com/natiq-foundation/natiq-frontend)
 - **Coding Standards**: frontend-standards
 
 ### Backend
@@ -68,23 +67,24 @@ Alignment Text to voice, by word by word timestamp.
 ### AI
 
 - **Language**: Python
-- **Module**: GPT free ver
+- **Module**: Free/Opensource model like OpenAI Whisper
 
 ### Infrastructure
 
 - **CI/CD**: GitHub Actions
-- **Hosting**: Server
-- **Docker availbe containers**:
-  - AI Proccessor
+- **Hosting**: Docker Containers
+- **Docker available containers**:
+  - AI Processor
   - Django API
   - Redis
-  - S3
+  - AWS S3
 
 ---
 
 ## Success Metrics
 
-- Alignment Quran text to recitation
+- Word boundary accuracy >95% on Quranic recitation test set
+- Brute force handling
 
 ---
 

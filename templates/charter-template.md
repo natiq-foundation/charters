@@ -53,7 +53,7 @@
 ### Frontend
 
 - **Framework**: [e.g., React, Vue, Angular]
-- **Template**: [natiq-frontend](/natiq-foundation/natiq-frontend)
+- **Template**: [natiq-frontend](https://github.com/natiq-foundation/natiq-frontend)
 - **Styling**: [e.g., Tailwind, CSS Modules]
 
 ### Backend
@@ -67,6 +67,11 @@
 - **Hosting**: [e.g., AWS, Azure, On-premise]
 - **CI/CD**: [e.g., GitHub Actions, Jenkins]
 - **Monitoring**: [e.g., Datadog, Prometheus]
+- **Docker available containers**:
+  - AI Processor
+  - Django API
+  - Redis
+  - AWS S3
 
 ---
 
