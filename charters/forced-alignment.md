@@ -1,4 +1,4 @@
-# Project Charter - forced-alignment
+# Project Charter - Forced Alignment
 
 **Last Updated**:
 **Version**: 1.0.0
@@ -6,20 +6,20 @@
 
 ---
 
-## Project Identification
+## 1. Project Identification
 
-| Field                  | Value            |
-| ---------------------- | ---------------- |
-| **Project Name**       | Forced Alignment |
-| **Project Code**       |                  |
-| **Project Manager**    |                  |
-| **Development Team**   |                  |
-| **Start Date**         | 2025-07-13       |
-| **Estimated End Date** |                  |
+| Field                  | Value              |
+| ---------------------- | ------------------ |
+| **Project Name**       | Forced Alignment   |
+| **Project Repo**       | [forced-alignment] |
+| **Project Manager**    |                    |
+| **Development Team**   |                    |
+| **Start Date**         | 2025-07-13         |
+| **Estimated End Date** |                    |
 
 ---
 
-## Vision and Goals
+## 2. Vision and Goals
 
 ### Vision
 
@@ -27,70 +27,103 @@ Automatically align a given text with a spoken audio file, producing word-level 
 
 ### High-Level Goals
 
-- Implement an AI-based forced alignment algorithm with word-level accuracy.
-- Splite the audio at specific timestamps (by word, sentence, or custom markers).
-- Standalone server
-- RESTful Open API
-- User-friendly web interface to upload audio/text, view results, and download segmented audio.
+- Enable users to obtain word‑level timestamps for any given audio and text.
+- Provide on‑demand audio segmentation (by word, sentence, or custom marker).
+- Offer a simple web interface that requires no technical knowledge.
 
 ---
 
-## Project Scope
+## 3. Project Scope
 
 ### In-Scope
 
-- Accept an audio file and its transcript, return a JSON response with alignment timestamps.
-- Segment the audio file.
-- Store input and output files in S3-compatible storage.
+- Build an endpoint that accepts audio + transcript, returns alignment JSON.
+- Implement asynchronous background processing with status polling.
+- Segment the audio file server‑side and serve the clips via S3‑compatible storage.
+- Develop a React frontend for upload, preview, and download.
 
 ### Out-of-Scope
 
-- Speech-to-text (ASR) transcription.
-- Collection of data for backup purposes.
+- Exposing a standalone speech-to-text (ASR) endpoint.
+- Collection of data (No data backup).
 
 ---
 
-## Architecture & Technologies
+## 4. Architecture & Technologies
 
 ### Frontend
 
-- **Framework**: React
-- **Template**: [natiq-frontend](https://github.com/natiq-foundation/natiq-frontend)
 - **Coding Standards**: frontend-standards
 
 ### Backend
 
 - **Language**: Python
-- **Framework**: Django
-- **Database**: Redis
+- **Framework**: Django (RESTful API)
+- **Coding Standards**: backend-standards
+- **Database**: None
+- **Broker**: Redis (Celery)
+- **Workflow**:
+  1. Accept audio + text
+  2. Return 202 with task_uuid
+  3. Process in background (async)
+  4. Poll GET /task/{uuid} for status/result
+  5. Optionally support webhooks.
 
 ### AI
 
 - **Language**: Python
-- **Module**: Free/Opensource model like OpenAI Whisper
+- **Module**: Free/Opensource model like Whisper-timestamped
 
 ### Infrastructure
 
 - **CI/CD**: GitHub Actions
-- **Hosting**: Docker Containers
-- **Docker available containers**:
+- **Hosting**: Single standalone server (Linux) running Docker
+- **Container Orchestration**: Docker Compose (for managing multi-container setup on one host)
+- **Core Containers:**:
   - AI Processor
   - Django API
+  - Celery
   - Redis
-  - AWS S3
+  - minio (Optional - Or use as external service)
 
 ---
 
-## Success Metrics
+## 5. Pending Decisions
+
+- Secret access token to api
+- Brute force handling
+- login
+
+---
+
+## 6. Timeline
+
+none
+
+---
+
+## 7. Risks & Challenges
+
+none
+
+---
+
+## 8. Success Metrics
 
 - Word boundary accuracy >95% on Quranic recitation test set
-- Brute force handling
 
 ---
 
-## Approval Signatures
+## 9. Budget & Resources
 
-| Role            | Name              | Signature | Date |
-| --------------- | ----------------- | --------- | ---- |
-| Curator         | [Al-Abd](/al-abd) |           |      |
-| Project Manager |                   |           |      |
+- **Human Resources**: 1
+
+---
+
+## 10. Approval Signatures
+
+| Role            | Github Account    | Signature |
+| --------------- | ----------------- | --------- |
+| Curator         | [Al-Abd](/al-abd) |           |
+| Deputy Curator  | [Al-Abd](/al-abd) |           |
+| Project Manager |                   |           |

@@ -1,4 +1,4 @@
-# Project Charter - [Repo Name]
+# Project Charter - [Project Name]
 
 **Last Updated**: [Date]
 **Version**: 1.0.0
@@ -6,12 +6,12 @@
 
 ---
 
-## Project Identification
+## 1. Project Identification
 
 | Field                  | Value |
 | ---------------------- | ----- |
 | **Project Name**       |       |
-| **Project Code**       |       |
+| **Project Repo**       |       |
 | **Project Manager**    |       |
 | **Development Team**   |       |
 | **Start Date**         |       |
@@ -19,7 +19,7 @@
 
 ---
 
-## Vision and Goals
+## 2. Vision and Goals
 
 ### Vision
 
@@ -33,7 +33,7 @@
 
 ---
 
-## Project Scope
+## 3. Project Scope
 
 ### In-Scope
 
@@ -48,7 +48,7 @@
 
 ---
 
-## Architecture & Technologies
+## 4. Architecture & Technologies
 
 ### Frontend
 
@@ -58,24 +58,34 @@
 
 ### Backend
 
-- **Language**: [e.g., Python, Node.js, Java]
-- **Framework**: [e.g., Django, Express, Spring]
-- **Database**: [e.g., PostgreSQL, MongoDB]
+- **Language**: Python
+- **Framework**: Django (RESTful API)
+- **Coding Standards**: backend-standards
+- **Database**: None
+- **Broker**: Redis (Celery)
 
 ### Infrastructure
 
-- **Hosting**: [e.g., AWS, Azure, On-premise]
-- **CI/CD**: [e.g., GitHub Actions, Jenkins]
+- **CI/CD**: GitHub Actions
+- **Hosting**:
+  - Single standalone server (Linux) running Docker
+  - AWS
 - **Monitoring**: [e.g., Datadog, Prometheus]
 - **Docker available containers**:
-  - AI Processor
   - Django API
-  - Redis
-  - AWS S3
+  - PostgreSQL
 
 ---
 
-## Timeline (Major Milestones)
+## 5. Pending Decisions
+
+- [Subject 1]
+- [Subject 2]
+- [Subject 3]
+
+---
+
+## 6. Timeline
 
 | Phase                  | Duration | Deliverable |
 | ---------------------- | -------- | ----------- |
@@ -88,7 +98,7 @@
 
 ---
 
-## Risks & Challenges
+## 7. Risks & Challenges
 
 | Risk | Probability  | Impact       | Mitigation Strategy |
 | ---- | ------------ | ------------ | ------------------- |
@@ -96,7 +106,7 @@
 
 ---
 
-## Success Metrics
+## 8. Success Metrics
 
 - [Metric 1]
 - [Metric 2]
@@ -104,7 +114,7 @@
 
 ---
 
-## Budget & Resources
+## 9. Budget & Resources
 
 - **Estimated Budget**: [Amount]
 - **Human Resources**: [Number of team members]
@@ -112,7 +122,7 @@
 
 ---
 
-## Approval Signatures
+## 10. Approval Signatures
 
 | Role            | Name | Signature | Date |
 | --------------- | ---- | --------- | ---- |
