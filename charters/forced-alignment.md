@@ -53,6 +53,7 @@ Automatically align a given text with a spoken audio file, producing word-level 
 
 ### Frontend
 
+- **Framework**: React
 - **Coding Standards**: frontend-standards
 
 ### Backend

@@ -54,7 +54,6 @@
 
 - **Framework**: [e.g., React, Vue, Angular]
 - **Template**: [natiq-frontend](https://github.com/natiq-foundation/natiq-frontend)
-- **Styling**: [e.g., Tailwind, CSS Modules]
 
 ### Backend
 
