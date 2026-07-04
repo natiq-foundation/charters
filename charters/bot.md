@@ -13,7 +13,7 @@
 | **Project Name**       | Bot                                 |
 | **Project Repo**       | bot                                 |
 | **Project Manager**    | [ibruxo](https://github.com/ibruxo) |
-| **Development Team**   |                                     |
+| **Development Team**   | Backend                             |
 | **Start Date**         | 2026-04-07                          |
 | **Estimated End Date** |                                     |
 

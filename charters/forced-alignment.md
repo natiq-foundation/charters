@@ -13,7 +13,7 @@
 | **Project Name**       | Forced Alignment   |
 | **Project Repo**       | [forced-alignment] |
 | **Project Manager**    |                    |
-| **Development Team**   |                    |
+| **Development Team**   | Backend            |
 | **Start Date**         | 2025-07-13         |
 | **Estimated End Date** |                    |
 
