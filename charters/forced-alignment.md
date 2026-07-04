@@ -118,13 +118,14 @@ none
 ## 9. Budget & Resources
 
 - **Human Resources**: 1
+- **Hardware/Software Resources**: 1 server
 
 ---
 
 ## 10. Approval Signatures
 
-| Role            | Github Account    | Signature |
-| --------------- | ----------------- | --------- |
-| Curator         | [Al-Abd](/al-abd) |           |
-| Deputy Curator  | [Al-Abd](/al-abd) |           |
-| Project Manager |                   |           |
+| Role            | Github Account                                    |
+| --------------- | ------------------------------------------------- |
+| Curator         | [Al-Abd](https://github.com/al-abd)               |
+| DevOps          | [codebysilence](https://github.com/codebysilence) |
+| Project Manager |                                                   |

@@ -60,7 +60,7 @@
 - **Language**: Python
 - **Framework**: Django (RESTful API)
 - **Coding Standards**: backend-standards
-- **Database**: None
+- **Database**: PostgreSQL
 - **Broker**: Redis (Celery)
 
 ### Infrastructure
@@ -123,8 +123,8 @@
 
 ## 10. Approval Signatures
 
-| Role            | Name | Signature | Date |
-| --------------- | ---- | --------- | ---- |
-| Project Manager |      |           |      |
-| Project Sponsor |      |           |      |
-| Technical Lead  |      |           |      |
+| Role            | Github Account                                    |
+| --------------- | ------------------------------------------------- |
+| Curator         | [Al-Abd](https://github.com/al-abd)               |
+| DevOps          | [codebysilence](https://github.com/codebysilence) |
+| Project Manager |                                                   |
