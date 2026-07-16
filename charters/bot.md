@@ -27,11 +27,10 @@ A Telegram bot that engages users with daily Quranic content and other Islamic t
 
 ### High-Level Goals
 
-- Deliver a daily Quranic verse or page to individual users.
-- Deliver a daily Quranic verse or page to channels and groups (scheduled posting).
+- Deliver a daily Quranic verse or page to users & channels and groups (scheduled posting).
 - Offer an “Open in Natiq” button that deep‑links to the companion app.
 - Support multiple languages via environment configuration.
-- (Future) Extend the same bot logic to other social media platforms. ##############################
+- (Future) Extend the same bot logic to other social media platforms.
 
 ---
 
@@ -40,6 +39,7 @@ A Telegram bot that engages users with daily Quranic content and other Islamic t
 ### In-Scope
 
 - Core bot logic built against the Telegram Bot API, which can also be deployed on any other platform that implements the same API.
+- All Telegram-specific features must be wrapped in automatic runtime capability checks. If a platform does not support a particular API endpoint, the associated UI elements and logic will be automatically disabled without breaking the core experience.
 - Quran section:
   - Daily 1 Ayah/Page (auto‑send to user or channel or group)
   - Random 1 Ayah/Page on demand

@@ -15,7 +15,3 @@ Central repository for managing project charters, guidelines, and organizational
 
 - All documentation written in clear, professional English
 - Use Markdown format for all documents
-
-## Team
-
-- **Repository Manager**: [Al-Abd](/al-abd)

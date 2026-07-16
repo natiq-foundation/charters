@@ -116,8 +116,8 @@
 ## 9. Budget & Resources
 
 - **Estimated Budget**: [Amount]
-- **Human Resources**: [Number of team members]
-- **Hardware/Software Resources**: [Specifications]
+- **Human Resources**: 1 developer/team
+- **Hardware/Software Resources**: 1 server/host
 
 ---
 
