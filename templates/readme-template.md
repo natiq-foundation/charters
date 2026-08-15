@@ -6,7 +6,7 @@
 
 ## Project Charter
 
-Project Charter is availbe on (charters)[].
+Project Charter is available on [charters](charter-template.md).
 
 ---
 
