@@ -42,66 +42,52 @@
 src
 │
 ├─ assets
-│ └─ svg
+│ ├─ svg
 │ └─ IconName.tsx
 │ - default export
 │ - simple arrow function
 │
 ├─ components (NO default export / don't design pages here)
-│
-│ ├─ ui (Original shadcn components)
+│ │
+│ ├─ ui (Standard UI components)
 │ │ ├─ button
 │ │ ├─ input
 │ │ ├─ dialog
+│ │ ├─ Card
+│ │ ├─ Footer
 │ │ └─ ...
 │ │
-│ ├─ specified (Project‑specific components)
-│ │ ├─ HeroBanner
-│ │ ├─ LandingCard
+│ ├─ specified (Project‑specific/Wrapped UI components)
+│ │ ├─ SerachInput (Specified UI SearchInput for this project)
+│ │ ├─ CardWrapped (Wrapped from Yakad or ex.)
+│ │ ├─ FooterWrapped
 │ │ └─ ...
 │ │
-│ ├─ features (Active components with logic)
-│ │
-│ │ ├─ darkMode
-│ │ │ ├─ DarkModeToggle.tsx
-│ │ │ ├─ useDarkMode.ts
-│ │ │ └─ index.ts
-│ │ │
-│ │ ├─ user
-│ │ │ ├─ UserFetcher.tsx
-│ │ │ ├─ useUser.ts
-│ │ │ └─ index.ts
-│ │ │
-│ │ └─ ...
-│ │
-│ └─ modules (Large UI blocks)
-│
-│ ├─ auth
-│ │ ├─ LoginForm.tsx
-│ │ ├─ RegisterForm.tsx
-│ │ └─ index.ts
-│ │
-│ ├─ dashboard
-│ │ ├─ Sidebar.tsx
-│ │ ├─ Navbar.tsx
-│ │ └─ index.ts
-│ │
-│ └─ ...
+│ └─ features (Active components with logic)
+│   ├─ darkMode
+│   │ ├─ DarkModeToggle.tsx
+│   │ └─ useDarkMode.ts (Save data on cookie)
+│   ├─ SearchBar
+│   │ ├─ SearchBar.tsx
+│   │ ├─ api.ts (Get search result from api)
+│   │ └─ forward.ts (Forward to selected item)
+│   ├─ user
+│   │ ├─ User.tsx (Profile Button on corner)
+│   │ └─ useUser.ts
+│   └─ ...
 │
 ├─ layouts
 │ ├─ AppLayout.tsx
 │ ├─ AuthLayout.tsx
 │ └─ ...
 │
-├─ routes (Page layout and composition only)
-│
-│ ├─ Dashboard
+├─ routes (Page content)
+│ ├─ Intro
 │ │ ├─ index.tsx (default export)
 │ │ ├─ AppBarWrapper.tsx
 │ │ ├─ IntroSection.tsx
 │ │ ├─ StatsSection.tsx
 │ │ └─ ...
-│ │
 │ └─ ...
 │
 ├─ hooks (Reusable React hooks)
@@ -126,6 +112,7 @@ src
 │ ├─ api.ts
 │ ├─ fetcher.ts
 │ ├─ cn.ts
+│ ├─ sdk.ts
 │ └─ ...
 │
 ├─ utils (Pure utility functions / no React)
